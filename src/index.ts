@@ -1,13 +1,14 @@
-//functions in typescript
-
-function calculateTax (income: number,taxYear:number): number {
-    if(taxYear < 2020)
-    return income * 1.2;
-    return income * 1.3;
+//objects in typescript
+let employees:{
+    id:number,
+    name:string,
+    retire:(date:Date)=>void
+} = {
+    id:1,
+    name:"Lucky",
+    retire:(date:Date)=>{
+        console.log(date);
+    }
 }
-let tax:number= calculateTax(20_000,2002);
-console.log(tax);
 
-//thera are some of the configurations that you have to make so as to work properly with functions
-//they include 1."noUnusedLocals": true, "noUnusedParameters": true, and "noImplicitReturns": true,  
-
+//this codes written above are not clean so we need to use type alliases to make our codes more cleaner
