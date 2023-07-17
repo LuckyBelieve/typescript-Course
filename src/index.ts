@@ -1,13 +1,10 @@
-//arrays in typescript
-//example
-let number:number[] = [1,2,3,4];
+//tuples are arrays of fixed number of elements
 
-let people:string[] = [];
-people[1] = 'John';
-people[2] = 'Mary';
-people.forEach(person => {
-    console.log(person);
-});
+let user:[number,string] = [1,"lucky"];
 
-//when you don't annotate the type while declaring variables the default type is any
+//let's talk about the enums that are used to define the constants
+const enum Size{small = 1,medium,large};
+let mySize:Size = Size.medium;
+console.log(mySize);
+
 
